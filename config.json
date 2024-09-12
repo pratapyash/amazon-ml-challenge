@@ -1,0 +1,8 @@
+{
+    "DATASET_DIR": "./dataset",
+    "SRC_SOURCE_DIR": "./source_files/src",
+    "SAMPLE_CODE_SOURCE": "./source_files/sample_code.py",
+    "TRAIN_IMAGES_DIR": "./train_images",
+    "TEST_IMAGES_DIR": "./test_images",
+    "DATASET_FILES": ["train.csv", "test.csv", "sample_test.csv", "sample_test_out.csv"]
+  }
