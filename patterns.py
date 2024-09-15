@@ -45,9 +45,9 @@ unit_mappings = {
 entity_patterns = {
     'item_weight': r'(\d+(\.\d+)?)\s*(milligram|kilogram|microgram|gram|ounce|ton|pound|mg|kg|g|oz|lb|lbs|μg|t|microg|grams|kilograms|milligrams|ounces|pounds|tons)',
     'maximum_weight_recommendation': r'(\d+(\.\d+)?)\s*(milligram|kilogram|microgram|gram|ounce|ton|pound|mg|kg|g|oz|lb|lbs|μg|t|microg|grams|kilograms|milligrams|ounces|pounds|tons)',
-    'width': r'(\d+(\.\d+)?)\s*(centimetre|foot|millimetre|metre|inch|yard|cm|mm|m|in|ft|yd|centimetres|millimetres|metres|inches|feet|yards|"|\')',
-    'height': r'(\d+(\.\d+)?)\s*(centimetre|foot|millimetre|metre|inch|yard|cm|mm|m|in|ft|yd|centimetres|millimetres|metres|inches|feet|yards|"|\')',
-    'depth': r'(\d+(\.\d+)?)\s*(centimetre|foot|millimetre|metre|inch|yard|cm|mm|m|in|ft|yd|centimetres|millimetres|metres|inches|feet|yards|"|\')',
+    'width': r'(?P<value>\d+(?:\.\d+)?)\s*(?P<unit>mm|millimeter|millimetre|cm|centimeter|centimetre|m|meter|metre|in|inch|ft|foot|feet|yd|yard|"|\'|centimetres|millimetres|metres|inches|feet|yards)s?',
+    'height': r'(?P<value>\d+(?:\.\d+)?)\s*(?P<unit>mm|millimeter|millimetre|cm|centimeter|centimetre|m|meter|metre|in|inch|ft|foot|feet|yd|yard|"|\'|centimetres|millimetres|metres|inches|feet|yards)s?',
+    'depth': r'(?P<value>\d+(?:\.\d+)?)\s*(?P<unit>mm|millimeter|millimetre|cm|centimeter|centimetre|m|meter|metre|in|inch|ft|foot|feet|yd|yard|"|\'|centimetres|millimetres|metres|inches|feet|yards)s?',
     'voltage': r'(\d+(\.\d+)?)\s*(millivolt|kilovolt|volt|mv|kv|v|volts|millivolts|kilovolts)',
     'wattage': r'(\d+(\.\d+)?)\s*(kilowatt|watt|kw|w|watts|kilowatts)',
     'item_volume': r'(\d+(\.\d+)?)\s*(cubic foot|cubic metre|microlitre|cup|fluid ounce|centilitre|imperial gallon|us gallon|pint|decilitre|litre|millilitre|quart|cubic inch|gallon|cu ft|cu m|cu in|ml|l|cl|dl|fl oz|pt|qt|gal|imp gal|us gal|μl|c|microl|cubic feet|cubic inches|cubic meters|cubic metres|fluid ounces|gallons|imperial gallons|us gallons|litres|millilitres|pints|quarts|us pints|us quarts|us fluid ounces)'

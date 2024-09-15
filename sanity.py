@@ -27,16 +27,16 @@ def sanity_check(test_filename, output_filename):
     if 'index' not in output_df.columns or 'prediction' not in output_df.columns:
         raise ValueError("Output CSV file must contain 'index' and 'prediction' columns.")
     
-    missing_index = set(test_df['index']).difference(set(output_df['index']))
-    if len(missing_index) != 0:
-        print("Missing index in test file: {}".format(missing_index))
-        
+    missing_index = list(set(test_df['index']).difference(set(output_df['index'])))
+    
     extra_index = set(output_df['index']).difference(set(test_df['index']))
     if len(extra_index) != 0:
         print("Extra index in test file: {}".format(extra_index))
         
     output_df.apply(lambda x: parse_string(x['prediction']), axis=1)
-    print("Parsing successfull for file: {}".format(output_filename))
+    print("Parsing successful for file: {}".format(output_filename))
+    
+    return missing_index
     
 if __name__ == "__main__":
     #Usage example: python sanity.py --test_filename sample_test.csv --output_filename sample_test_out.csv

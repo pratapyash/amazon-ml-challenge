@@ -32,5 +32,5 @@ def fill_missing_indices(reference_file, csv_file, output_file, total_rows=LENGT
     print(f"Missing indices filled and saved to {output_file}")
 
 # Example usage:
-fill_missing_indices(TEST_DATA_PATH, 'test_out.csv', 'test_out_structured.csv')
-sanity_check(TEST_DATA_PATH, 'test_out_structured.csv')
+fill_missing_indices(TEST_DATA_PATH, 'test_out.csv', 'test_out.csv')
+sanity_check(TEST_DATA_PATH, 'test_out.csv')
